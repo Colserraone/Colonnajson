@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Carica dati da una carta d'identità</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        #identita {
+            margin: 0 auto;
+            text-align: left;
+            width: 300px;
+        }
+        h1 {
+            margin: 0; 
+        }
+        img {
+            width: 40%; 
+            
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Carta d'Identità</h1>
+    <img src="foto.jpg" alt="Foto della Carta d'Identità">
+    <div id="identita">
+        <p><strong>Nome:</strong> <span id="nome"></span></p>
+        <p><strong>Cognome:</strong> <span id="cognome"></span></p>
+        <p><strong>Data di nascita:</strong> <span id="dataNascita"></span></p>
+        <p><strong>Luogo di nascita:</strong> <span id="luogoNascita"></span></p>
+        <p><strong>Numero di carta d'identità:</strong> <span id="numeroCarta"></span></p>
+    </div>
+
+    <script>
+        // Dati JSON simulati
+        var datiCartaIdentita = {
+            "nome": "Ciro",
+            "cognome": "Colonnese",
+            "dataNascita": "06/04/2005",
+            "luogoNascita": "Napoli",
+            "numeroCarta": "123456789"
+        };
+
+        // Carica dati dalla carta d'identità simulata
+        document.getElementById("nome").textContent = datiCartaIdentita.nome;
+        document.getElementById("cognome").textContent = datiCartaIdentita.cognome;
+        document.getElementById("dataNascita").textContent = datiCartaIdentita.dataNascita;
+        document.getElementById("luogoNascita").textContent = datiCartaIdentita.luogoNascita;
+        document.getElementById("numeroCarta").textContent = datiCartaIdentita.numeroCarta;
+    </script>
 </body>
 </html>
+
